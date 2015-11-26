@@ -22,6 +22,10 @@ file { '/home/lph/landingpages/logs/':
   ensure => 'directory',
 }
 
+file { '/home/lph/downloads':
+  ensure => 'directory',
+}
+
 file { '/etc/nginx/sites-enabled/lph.conf':
   ensure => present,
   source => 'puppet:///modules/lph_nginx/nginx-dev.conf',
